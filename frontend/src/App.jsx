@@ -1,0 +1,4 @@
+import { Routes,Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home'; import Flights from './pages/Flights'; import FlightDetails from './pages/FlightDetails'; import PassengerDetails from './pages/PassengerDetails'; import BookingConfirmation from './pages/BookingConfirmation'; import MyBookings from './pages/MyBookings'; import Admin from './pages/Admin';
+export default function App(){return <><Navbar/><Routes><Route path="/" element={<Home/>}/><Route path="/flights" element={<Flights/>}/><Route path="/flights/:id" element={<FlightDetails/>}/><Route path="/book/:flightId" element={<PassengerDetails/>}/><Route path="/booking/:id" element={<BookingConfirmation/>}/><Route path="/my-bookings" element={<MyBookings/>}/><Route path="/admin" element={<Admin/>}/><Route path="*" element={<Home/>}/></Routes></>}
